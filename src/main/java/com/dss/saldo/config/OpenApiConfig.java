@@ -17,7 +17,7 @@ public class OpenApiConfig {
                         .version("1.0")
                         .description("API untuk simulasi perhitungan portofolio investasi (Live Coding Interview)")
                         .contact(new Contact()
-                                .name("Nama Kamu")
-                                .email("emailmu@example.com")));
+                                .name("Anggi Permana")
+                                .email("anggipermana490@gmail.com")));
     }
 }
