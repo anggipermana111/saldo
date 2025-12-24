@@ -66,6 +66,9 @@ public class PortfolioService {
             UnitPrice historicalPrice = new UnitPrice();
             while(historicalPriceOpt.isEmpty()) {
                 hPlusOneDate = hPlusOneDate.plusDays(1);
+                if(hPlusOneDate.isAfter(LocalDate.now())) {
+                    throw new RuntimeException("Tanggal Kosong");
+                }
                 historicalPriceOpt = priceRepo.findByNavDate(hPlusOneDate);
             }
             historicalPrice = historicalPriceOpt.get();
